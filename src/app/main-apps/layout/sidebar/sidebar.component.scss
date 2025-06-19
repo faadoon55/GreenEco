@@ -1,0 +1,146 @@
+:host {
+  height: 100vh;
+  margin: 0;
+  width: var(--sidenav-collapsed-width);
+
+  &.is-expanded {
+    width: auto;
+  }
+
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  background: var(--background);
+  transition: width 0.6s cubic-bezier(0.02, 0.68, 0.63, 0.98);
+  border-left: 3px solid;
+  border-color: var(--main);
+}
+
+.toggle-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  $size: 55px;
+  width: 25px;
+  height: 25px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 15px;
+  left: calc($size / -2.5) - 2.5px;
+  border: 3px solid;
+  border-color: var(--main);
+  background-color: var(--background);
+  color: var(--main);
+  cursor: pointer;
+
+  &.is-flipped {
+    transform: rotate(-180deg);
+    $size: 25px;
+    left: calc($size / -2.5) - 2.5px;
+  }
+
+  i {
+    font-size: 1em;
+    width: fit-content;
+    height: fit-content;
+  }
+}
+
+.sidenav-body-container {
+  overflow-y: auto;
+  height: 100%;
+  width: auto;
+  padding: 0 10px 0 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.container {
+  display: inline-block;
+  direction: ltr;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  margin: 15px auto 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.name {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font1);
+  color: var(--main);
+  font-size: 25px;
+}
+
+.name:hover {
+  color: var(--prime);
+}
+
+.logo {
+  height: 15px;
+  width: auto;
+  margin: 0;
+  margin-top: 10px;
+  padding: 0;
+}
+
+.sidebar-divider {
+  box-sizing: border-box;
+  width: 100%;
+  height: 0;
+  background: var(--main);
+  margin: 15px 0 0;
+  border-bottom: 0.5px solid;
+  border-color: var(--main);
+}
+
+.container1 {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+a:link,
+a:visited {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background-color: var(--background);
+  text-decoration: none;
+}
+
+.a:link,
+.a:visited {
+  box-sizing: border-box;
+  border-bottom: 0.5px solid;
+  border-color: var(--main);
+  font-family: var(--font);
+  font-size: 14px;
+  color: var(--main);
+  height: 2.5rem;
+  width: 200px;
+  padding: 0.5rem;
+  transition: background-color .3s ease, color .3s ease;
+
+  &:hover {
+    background-color: var(--prime1);
+  }
+}
+
+.a:active,
+.a:focus {
+  background-color: var(--prime1);
+}

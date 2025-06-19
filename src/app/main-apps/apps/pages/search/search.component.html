@@ -1,0 +1,36 @@
+<div class="body">
+
+  <form (ngSubmit)="onSearch()">
+
+    <div class="search-container">
+      <i class="fas fa-search search-icon"></i>
+      <input type="text" placeholder="ادخل معرف البحث الذي تريده" (ngModel)="searchQuery" name="searchInput"
+        #searchInput autofocus required>
+    </div>
+
+    <button type="submit">بحث</button>
+
+  </form>
+
+  <!-- قسم عرض عمليات البحث السابقة -->
+  <div class="previous-searches">
+    <!-- *ngIf="previousSearches.length > 0" -->
+    <h3>عمليات البحث السابقة:</h3>
+    <ul>
+      <li *ngFor="let search of previousSearches">{{ search }}</li>
+    </ul>
+    <button (click)="clearPreviousSearches()">مسح عمليات البحث السابقة</button>
+  </div>
+
+  <!-- قسم عرض نتائج البحث -->
+  <div class="search-results">
+    <!-- *ngIf="searchResults.length > 0" -->
+    <h3>نتائج البحث:</h3>
+    <a class="a-card" routerLink="/apps/pages/plant-information">
+      <!-- *ngFor="let result of searchResults" -->
+      <i class="fa-solid fa-leaf"></i>
+      <p class="PS"><!--{{result}}-->نبتة</p>
+    </a>
+  </div>
+
+</div>

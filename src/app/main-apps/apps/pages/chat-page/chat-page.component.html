@@ -1,0 +1,51 @@
+<div class="body">
+  <div class="mainContainer">
+    <div class="title">
+      <h1>المحادثات</h1>
+    </div>
+
+    <div class="MessagesContainer" *ngFor="let item of arrayList">
+      <p class="user">{{ item.user }}</p>
+      <p class="ai">{{ item.ai }}</p>
+    </div>
+
+    <div class="inputsContainer">
+      <input
+        class="inputFiled"
+        type="text"
+        placeholder="اكتب هنا"
+        [(ngModel)]="userMessage"
+      />
+
+      <label for="imageInput" class="file-label">
+        <i class="fa-solid fa-image"></i>
+      </label>
+      <input
+        type="file"
+        id="imageInput"
+        accept="image/*"
+        capture="environment"
+        style="display: none;"
+        (change)="onFileSelected($event)"
+      />
+
+      <button class="sendButton" (click)="sendMessage()">إرسال</button>
+    </div>
+  </div>
+</div>
+
+<ng-template #content let-modal>
+  <div class="pop-up">
+    <div class="header">
+      <h4 class="title-h4">معاينة الصورة</h4>
+      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <div class="popUPBody">
+      <img [src]="imagePreview" *ngIf="imagePreview" class="imagePreview" alt="صورة محملة" />
+      <textarea class="inputFiled" placeholder="اكتب تعليقاً..." [(ngModel)]="imageComment"></textarea>
+    </div>
+    <div class="opration">
+      <button class="sendButton1" (click)="sendImageWithComment(modal)">إرسال</button>
+    </div>
+  </div>
+</ng-template>

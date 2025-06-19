@@ -1,0 +1,88 @@
+<div class="body">
+
+  <div class="mainContainer">
+
+    <div class="title">
+      <p>الصفحة الرئيسية</p>
+    </div>
+
+    <div class="searchContainer">
+      <a class="aSearch" routerLink="/apps/pages/search">بحث<i class="fas fa-search search-icon"></i></a>
+    </div>
+
+    <p>خدمات</p>
+
+    <div class="parentContainer-">
+
+      <div class="childContainer">
+
+        <label for="imageInput" class="fileLabel"><i class="fa-solid fa-image"></i>
+          <p class="PCard">التعرف على صورة</p>
+        </label>
+        <input type="file" id="imageInput" accept="image/*" capture="environment" style="display: none;"
+          (change)="onFileSelected($event)" />
+
+        <a class="aCard" routerLink="/apps/pages/animals-harmful-to-plants"><i
+            class="fa-solid fa-triangle-exclamation"></i>
+          <p class="PCard">حيوانات ضارة بالنبات</p>
+        </a>
+
+        <a class="aCard" routerLink="/apps/pages/poisonous-plants">
+          <i class="fa-solid fa-leaf"></i>
+          <p class="PCard">نباتات سامة</p>
+        </a>
+
+        <a class="aCard" routerLink="/apps/pages/plant-diseases">
+          <i class="fa-solid fa-kit-medical"></i>
+          <p class="PCard">أمراض النباتات</p>
+        </a>
+
+        <!-- <a class="aCard" routerLink="/apps/pages/my-garden">
+          <i class="fa-solid fa-tree"></i>
+          <p class="PCard">حديقتي</p>
+        </a>
+
+        <a class="aCard" routerLink="/apps/pages/reminders">
+          <i class="fa-solid fa-bell"></i>
+          <p class="PCard">التذكيرات</p>
+        </a> -->
+
+        <a class="aCard" routerLink="/apps/pages/chat-page">
+          <i class="fa-solid fa-comments"></i>
+          <p class="PCard">إنشاء محادثة</p>
+        </a>
+
+      </div>
+
+    </div>
+
+    <p>النباتات الأكثر تداولاً</p>
+    <div class="parentContainer">
+      <div class="childContainer">
+        <a *ngFor="let item of Common_Plants" class="aCard" [routerLink]="['/apps/pages/plant-information', item.id]">
+          <img class="plantImage" src="{{item.plantImage}}" alt="صورة">
+          <!-- <i class="fa-solid fa-leaf"></i> -->
+          <p class="PCard">{{item.plant}}</p>
+        </a>
+      </div>
+    </div>
+
+    <p>اقتراحات النباتات</p>
+    <div class="parentContainer">
+      <div class="childContainer">
+        <a *ngFor="let item of Suggested_Plants" class="aCard"
+          [routerLink]="['/apps/pages/plant-information', item.id]">
+          <img class="plantImage" src="{{item.plantImage}}" alt="صورة">
+          <!-- <i class="fa-solid fa-leaf"></i> -->
+          <p class="PCard">{{item.plant}}</p>
+        </a>
+      </div>
+    </div>
+
+    <a class="aMore" routerLink="/apps/pages/explore">
+      <p class="PMore">المزيد</p>
+    </a>
+
+  </div>
+
+</div>

@@ -1,0 +1,136 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-height: 525px;
+  margin: 60px 0;
+  padding: 0;
+  font-family: var(--font);
+  color: var(--main);
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  height: auto;
+  min-height: 520px;
+  width: 90%;
+  margin: 0;
+  padding: 0 0 50px;
+  background-color: var(--prime1);
+  border-radius: 5px;
+  border: 3px solid;
+  border-color: var(--main);
+}
+
+.title {
+  box-sizing: border-box;
+  margin: 50px 0 0;
+  padding: 10px;
+
+  h1 {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font);
+    color: var(--main);
+    font-size: var(--title);
+    font-weight: 500;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  height: auto;
+  width: 90%;
+  margin: 50px 0 0;
+  padding: 0;
+}
+
+.mainButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  height: 80px;
+  width: 90%;
+  margin: 10px;
+  padding: 5px;
+  background-color: rgba(255, 0, 0, 0);
+  border-radius: 5px;
+  border: 2px solid;
+  border-color: var(--main);
+  box-shadow: -3px 3px 1px var(--prime1);
+  color: var(--main);
+  font-size: 30px;
+}
+
+.pop-up {
+  direction: rtl;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  min-height: 200px;
+  width: auto;
+  margin: 0px;
+  padding: 20px;
+  background-color: var(--background);
+  border-radius: 5px;
+  border: 5px solid;
+  border-color: var(--main);
+  color: var(--main);
+  box-shadow: -2px 2px 8px var(--shadow);
+}
+
+.pop-up-title-h4 {
+  font-size: 18px;
+  padding: 0;
+  margin: 0;
+}
+
+.btn-close {
+  padding: 10px;
+  margin: 0px 215px 0px 0px;
+  background-color: var(--main);
+  border: 0;
+  width: 10px;
+  height: 10px;
+}
+
+.pop-up-opration-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.pop-up-edit-button:hover,
+.pop-up-delete-button:hover {
+  background-color: var(--textCol);
+}
+
+.button {
+  width: 50px;
+  background-color: var(--main);
+  border-radius: 10px;
+  border: var(--main);
+  padding:10px;
+  margin: 5px;
+  font-family: var(--font);
+  color: var(--background);
+  box-shadow: 0px 2px 6px var(--shadow);
+  text-decoration: none;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}

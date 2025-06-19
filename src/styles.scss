@@ -1,0 +1,67 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+@import url(https://fonts.googleapis.com/css?family=Almarai);
+@import url(https://fonts.googleapis.com/css?family=Amarante);
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+// @import "~ngx-spinner/animations/ball-spin-clockwise.css";
+// @import 'ngx-toastr/toastr';
+
+:root{
+  --background: #F7F4E6;
+  --main: #50745F;
+  --prime: #90AC8E;
+  --prime1: #50745f54;
+  --addition: #B1AF86;
+  --black: #303030 ;
+  --icons: #305934;
+  --font: 'Almarai';
+  --font1: 'Amarante';
+  --shadow: #305934;
+  --shadow1: rgba(0, 0, 0, 0.354);
+  --warn: #DE5B5C;
+  --sidenav-width: 300px;
+  --sidenav-collapsed-width: 0;
+  --title: 30px;
+  --subtitle: 18px;
+}
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$GraduationProject-primary: mat.define-palette(mat.$indigo-palette);
+$GraduationProject-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$GraduationProject-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$GraduationProject-theme: mat.define-light-theme((
+  color: (
+    primary: $GraduationProject-primary,
+    accent: $GraduationProject-accent,
+    warn: $GraduationProject-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($GraduationProject-theme);
+
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family:'Almarai', 'Amarante', "Helvetica Neue", sans-serif, "Arial", 'Roboto'; }
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';

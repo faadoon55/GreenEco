@@ -1,0 +1,34 @@
+<div class="body">
+
+  <div class="mainContainer">
+
+    <div class="title">
+      <h1>التذكيرات</h1>
+    </div>
+
+    <div class="container">
+    <button class="mainButton" (click)="open(content)">إضافة تذكير جديد</button>
+  </div>
+
+  </div>
+
+</div>
+
+
+<ng-template #content let-modal>
+
+  <div class="pop-up">
+
+  <div class="pop-up-header-div">
+    <h4 class="pop-up-title-h4" id="pop-up-title">اختر العملية التي تريد تنفيذها : </h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+  </div>
+
+  <div class="pop-up-opration-div">
+    <button  class="pop-up-edit-button" (click)="modal.nevigateAndSend('edit click')">تعديل</button>
+    <button  class="pop-up-delete-button" (click)="modal.delete('delete click')">حذف</button>
+  </div>
+
+</div>
+
+</ng-template>

@@ -1,0 +1,60 @@
+<div class="body">
+
+  <div class="maincontainer">
+
+    <div class="title">
+      <h1>معلومات النبات</h1>
+    </div>
+
+    <!-- <div  *ngFor="let item of information"> -->
+    <div class="inputGroup">
+      <label class="inputLabel" for="text">- أماكن الانتشار والموطن:</label>
+      <input class="inputField" id="text" type="text" name="textName" [value]="informationToDisplay.information1" disabled>
+    </div>
+
+    <div class="inputGroup">
+      <label class="inputLabel" for="text">- الوصف النباتي:</label>
+      <input class="inputField" id="text" type="text" name="textName" [value]="informationToDisplay.information2" disabled>
+    </div>
+
+    <div class="inputGroup">
+      <label class="inputLabel" for="text">- الخصائص والوظائف والفوائد والاستخدامات:</label>
+      <input class="inputField" id="text" type="text" name="textName" [value]="informationToDisplay.information3" disabled>
+    </div>
+
+    <div class="inputGroup">
+      <label class="inputLabel" for="text">- ظروف النمو والعناية:</label>
+      <input class="inputField" id="text" type="text" name="textName"  [value]="informationToDisplay.information4" disabled>
+    </div>
+
+    <div class="inputGroup">
+      <label class="inputLabel" for="text">- دورة حياة النبات:</label>
+      <input class="inputField" id="text" type="text" name="textName" [value]="informationToDisplay.information5" disabled>
+    </div>
+
+    <div class="inputGroup">
+      <label class="inputLabel" for="text">- الآفات والأمراض:</label>
+      <input class="inputField" id="text" type="text" name="textName" [value]="informationToDisplay.information6" disabled>
+    </div>
+
+    <div class="inputGroup">
+      <label class="inputLabel" for="text">- التحذيرات والمخاطر:</label>
+      <input class="inputField" id="text" type="text" name="textName" [value]="informationToDisplay.information7" disabled>
+    </div>
+
+    <div class="inputGroup">
+      <label class="inputLabel" for="text">- التوصيات:</label>
+      <input class="inputField" id="text" type="text" name="textName" [value]="informationToDisplay.information8" disabled>
+    </div>
+  <!-- </div> -->
+
+    <div class="conversation-container">
+      <a class="a-conversation" routerLink="/apps/pages/chat-page">
+        ناقش واعرف المزيد
+        <i class="fa-solid fa-comments"></i>
+      </a>
+    </div>
+
+  </div>
+
+</div>

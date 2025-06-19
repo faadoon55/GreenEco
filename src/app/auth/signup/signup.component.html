@@ -1,0 +1,78 @@
+<app-header></app-header>
+
+<div class="body">
+
+  <form class="container" [formGroup]="formData" (ngSubmit)="signUp()">
+
+    <div class="part1">
+
+      <div class="title">
+        <p>إنشاء حساب جديد</p>
+      </div>
+
+      <div class="inputGroup">
+        <label class="inputLabel" for="username">اسم المستخدم:</label>
+        <input class="inputField" id="username" type="text" formControlName="username" placeholder="ادخل اسم المستخدم"
+          required>
+        <div *ngIf="submitted && formDataGet['username'].errors">
+          <div class="invalid-feedback-custom" *ngIf="formDataGet['username'].errors['required']">الحقل مطلوب!</div>
+        </div>
+      </div>
+
+      <div class="inputGroup">
+        <label class="inputLabel" for="email">البريد الإلكتروني :</label>
+        <input class="inputField" id="email" type="email" formControlName="email" placeholder="ادخل البريد الإلكتروني"
+          required>
+        <div *ngIf="submitted && formDataGet['email'].errors">
+          <div class="invalid-feedback-custom" *ngIf="formDataGet['email'].errors['required']">الحقل مطلوب!</div>
+          <div class="invalid-feedback-custom" *ngIf="formDataGet['email'].errors['email']">يرجى إدخال بريد إلكتروني
+            صالح!</div>
+        </div>
+      </div>
+
+      <div class="inputGroup">
+        <label class="inputLabel" for="phone">رقم الجوال:</label>
+        <input class="inputField" id="phone" type="text" formControlName="phone" placeholder="ادخل رقم الجوال" required>
+        <div *ngIf="submitted && formDataGet['phone'].errors">
+          <div class="invalid-feedback-custom" *ngIf="formDataGet['phone'].errors['required']">الحقل مطلوب!</div>
+          <div class="invalid-feedback-custom" *ngIf="formDataGet['phone'].errors['pattern']">رقم الجوال غير صالح!</div>
+        </div>
+      </div>
+
+      <div class="inputGroup">
+        <label class="inputLabel" for="password">كلمة المرور:</label>
+        <input class="inputField" id="password" type="password" formControlName="password"
+          placeholder="ادخل كلمة المرور" required>
+        <div *ngIf="submitted && formDataGet['password'].errors">
+          <div class="invalid-feedback-custom" *ngIf="formDataGet['password'].errors['required']">الحقل مطلوب!</div>
+          <div class="invalid-feedback-custom" *ngIf="formDataGet['password'].errors['pattern']">يجب أن تحتوي كلمة
+            المرور على أحرف كبيرة وصغيرة وأرقام!</div>
+        </div>
+      </div>
+
+      <div class="inputGroup">
+        <label class="inputLabel" for="confirmation">تأكيد كلمة المرور:</label>
+        <input class="inputField" id="confirmation" type="password" formControlName="confirmation"
+          placeholder="ادخل تأكيد كلمة المرور" required>
+        <div *ngIf="submitted && formDataGet['confirmation'].errors">
+          <div class="invalid-feedback-custom" *ngIf="formDataGet['confirmation'].errors['required']">الحقل مطلوب!</div>
+          <div class="invalid-feedback-custom" *ngIf="formDataGet['confirmation'].errors['mustMatch']">كلمة المرور غير
+            مطابقة!</div>
+        </div>
+      </div>
+
+      <div class="signup">
+        <button type="submit" (click)="signUp()" >إنشاء الحساب</button> <!-- [disabled]="formData.invalid" -->
+      </div>
+
+    </div>
+
+    <div class="part2">
+      <p class="sign">لديك حساب بالفعل؟<a class="signin" routerLink="/auth/login">تسجيل الدخول</a></p>
+    </div>
+
+  </form>
+
+</div>
+
+<app-footer></app-footer>

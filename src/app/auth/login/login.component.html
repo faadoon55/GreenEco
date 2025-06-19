@@ -1,0 +1,61 @@
+<app-header></app-header>
+
+<div class="body">
+
+  <form class="container" [formGroup]="formData" (ngSubmit)="logIn()">
+
+    <div class="part1">
+
+      <div class="title">
+        <p>تسجيل الدخول</p>
+      </div>
+
+      <div class="inputGroup">
+        <label class="inputLabel" for="email">البريد الإلكتروني :</label>
+        <input class="inputField" id="email" type="email" formControlName="email" placeholder="ادخل البريد الإلكتروني" required>
+        <div *ngIf="submitted && formDataGet['email'].errors">
+          <div class="invalid-feedback-custom" *ngIf="formDataGet['email'].errors['required']">الحقل مطلوب!</div>
+          <div class="invalid-feedback-custom" *ngIf="formDataGet['email'].errors['email']">يرجى إدخال بريد إلكتروني صالح!</div>
+        </div>
+      </div>
+
+      <div class="inputGroup">
+        <label class="inputLabel" for="password">كلمة المرور :</label>
+        <input class="inputField" id="password" type="password" formControlName="password" placeholder="ادخل كلمة المرور" required>
+        <div *ngIf="submitted && formDataGet['password'].errors">
+          <div class="invalid-feedback-custom" *ngIf="formDataGet['password'].errors['required']">الحقل مطلوب!</div>
+          <div class="invalid-feedback-custom" *ngIf="formDataGet['password'].errors['pattern']">يجب أن تحتوي كلمة المرور على أحرف كبيرة وصغيرة وأرقام!</div>
+        </div>
+      </div>
+
+      <div class="login">
+        <button class="loginButton" type="submit" (click)="logIn()">تسجيل الدخول</button>
+      </div>
+
+      <p class="forgetting" (click)="open(content)">نسيت كلمة المرور</p>
+    </div>
+
+    <div class="part2">
+      <p class="creating">ليس لديك حساب؟<a class="creat" routerLink="/auth/signup">انشاء حساب</a></p>
+    </div>
+
+  </form>
+
+</div>
+
+<app-footer></app-footer>
+
+<ng-template #content let-modal>
+    <div class="popUp">
+      <p class="massage">فضلاً قم بإدخال بريدك الإلكتروني المرتبط بالحساب</p>
+      <input class="inputField" type="email" placeholder="ادخل بريدك الإلكتروني" required>
+      <button type="button" (click)="open1(content1)">تأكيد</button>
+    </div>
+</ng-template>
+
+<ng-template #content1 let-modal>
+  <div class="popUp">
+    <p class="massage1">لقد قمنا بإرسال رابط إعادة تعيين كلمة المرور إلى بريدك الإلكتروني</p>
+    <button type="button" (click)="close()">إغلاق</button>
+  </div>
+</ng-template>

@@ -1,0 +1,205 @@
+.body {
+  direction: rtl;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-height: 553px;
+  width: 100%;
+  padding: 0;
+  margin: 40px 0px 0px;
+  box-sizing: border-box;
+  font-family: var(--font);
+}
+
+.container {
+  height: auto;
+  width: auto;
+  padding: 10px;
+  margin: 30px auto 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.part1 {
+  height: auto;
+  width: 400px;
+  padding: 5px;
+  margin: 5px;
+  margin-bottom: 1.5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--prime1);
+  border-radius: 5px 5px 0 0;
+  border: 3px solid;
+  border-bottom: 0.1px solid;
+  border-color: var(--main);
+}
+
+.part2 {
+  height: auto;
+  width: 400px;
+  padding: 5px;
+  margin: 5px;
+  margin-top: 1.5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: var(--prime1);
+  border-radius: 0 0 5px 5px;
+  border: 3px solid;
+  border-top: 0.1px solid;
+  border-color: var(--main);
+}
+
+.title {
+  padding: 10px;
+  margin: 10px;
+  margin-bottom: 20px;
+  p {
+    font-size: var(--title);
+    font-weight: bold;
+    color: var(--main);
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.inputGroup {
+  padding: 0;
+  margin: 0;
+}
+
+.inputLabel {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--main);
+  padding: 0;
+  margin: 5px 60px 5px 0px;
+}
+
+.inputField {
+  padding: 5px;
+  margin: 2px 80px;
+  height: auto;
+  width: 300px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0);
+  border: 2px solid;
+  border-color: var(--main);
+  display: flex;
+  text-align: center;
+  align-items: center;
+  font-size: 12px;
+  font-family: var(--font);
+
+  &:focus {
+    outline-color: var(--main);
+    background-color: var(--background);
+    font-size: 14px;
+    color: var(--main);
+  }
+}
+
+.invalid-feedback-custom {
+  margin-right: 185px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--icons);
+}
+
+.login {
+  padding: 0px;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--main);
+  border-radius: 5px;
+  height: 30px;
+  width: 100px;
+  border: none;
+  padding: 3px;
+  margin: 5px 0 0;
+  font-size: 12px;
+  font-family: var(--font);
+  color: var(--background);
+  transition: width 2s;
+}
+
+button:hover {
+  background-color: var(--icons);
+  width: 110px;
+}
+
+.forgetting {
+  margin: 5px;
+  color: var(--main);
+  font-weight: bold;
+  font-size: 12px;
+
+    &:hover {
+      cursor: pointer;
+      color: var(--icons);
+    }
+}
+
+.creating {
+  margin: 0;
+  color: var(--main);
+  font-size: 12px;
+
+  a {
+    margin: 5px;
+    text-decoration: none;
+    color: var(--main);
+    font-weight: bold;
+  }
+
+  a:hover{
+    cursor: pointer;
+    color: var(--icons);
+  }
+}
+
+.popUp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  width: auto;
+  margin: 0px;
+  padding: 20px 5px;
+  background-color: var(--background);
+  border-radius: 5px;
+  border: 3px solid;
+  border-color: var(--main);
+  box-shadow: -2px 2px 8px var(--icons);
+}
+
+.massage {
+  margin: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: var(--font);
+  color: var(--main);
+}
+
+.massage1 {
+  margin: 20px 20px 5px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: var(--font);
+  color: var(--main);
+}

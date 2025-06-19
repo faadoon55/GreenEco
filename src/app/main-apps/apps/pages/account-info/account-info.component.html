@@ -1,0 +1,59 @@
+<div class="body">
+
+  <form class="container">
+
+    <div class="part1">
+
+      <div class="title">
+        <p>معلوماتي</p>
+      </div>
+
+      <div class="father">
+        <div class="child" *ngIf="!uploadedImage">
+          <i class="fa-solid fa-user"></i>
+        </div>
+        <img class="userImg" *ngIf="uploadedImage" [src]="uploadedImage" alt="Uploaded Image">
+      </div>
+
+      <label for="imageInput" class="fileLabel">
+        <p class="PS">تحديث الصورة</p>
+      </label>
+      <input type="file" id="imageInput" accept="image/*" capture="environment" style="display: none;"
+        (change)="onFileSelected($event)"/>
+
+      <div class="inputDiv">
+        <label class="inputLabel" for="username">اسم المستخدم :</label>
+        <input class="inputField" id="usernamee" type="text" name="usernameName" placeholder="Osama"
+          disabled>
+      </div>
+
+      <div class="inputDiv">
+        <label class="inputLabel" for="email">البريد الإلكتروني :</label>
+        <input class="inputField" id="email" type="email" name="emailName" placeholder="Osama@gmail.com"
+          disabled>
+      </div>
+
+      <div class="inputDiv">
+        <label class="inputLabel" for="phoneNumber">رقم الهاتف :</label>
+        <input class="inputField" id="phoneNumber" type="phone" name="phoneNumberName" placeholder="0566616506"
+          disabled>
+      </div>
+
+      <div class="inputDiv">
+        <label class="inputLabel" for="password">كلمة المرور :</label>
+        <input class="inputField" id="password" type="password" name="passwordName" placeholder="Aa12345678" disabled>
+      </div>
+
+      <a class="a-edit" routerLink="/apps/pages/edit-account-info">
+        <p class="PS">تعديل</p>
+      </a>
+
+    </div>
+
+    <div class="part2">
+      <a class="a-signout" routerLink="/auth/login" (click)="signout()">تسجيل الخروج</a>
+    </div>
+
+  </form>
+
+</div>

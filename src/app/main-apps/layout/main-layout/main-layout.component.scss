@@ -1,0 +1,15 @@
+:host {
+  min-height: 100vh;
+  direction: rtl;
+  display: flex;
+  flex-direction: row;
+}
+
+
+.content {
+  flex-grow: 1;
+  // padding: 1rem 3rem;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

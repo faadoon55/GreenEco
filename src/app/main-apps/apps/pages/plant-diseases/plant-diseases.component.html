@@ -1,0 +1,48 @@
+<div class="body">
+
+  <div class="maincontainer">
+
+  <div class="title">
+    <h1>أمراض النباتات</h1>
+  </div>
+
+  <div class="search-container">
+    <a class="a-search" routerLink="/apps/pages/search">
+      بحث
+      <i class="fas fa-search search-icon"></i>
+    </a>
+  </div>
+
+  <p class="p-imge">التقط صورة أو قم بتحميلها</p>
+    <label for="imageInput" class="file-label">
+      <i class="fa-solid fa-camera"></i>
+      <p class="PS">اضغط هنا</p>
+    </label>
+    <input type="file" id="imageInput" accept="image/*" capture="environment" style="display: none;"
+      (change)="onFileSelected($event)" />
+
+  <p>أمراض تصيب أجزاء النباتات</p>
+  <div class="parentContainer">
+    <div class="childContainer">
+      <a *ngFor="let item of Suggested_diseases" class="a-card" routerLink="/apps/pages/disease-info/{{item.id}}">
+        <img class="diseaseImage" src="{{item.diseaseImage}}" alt="صورة">
+        <!-- <i class="fa-solid fa-kit-medical"></i> -->
+        <p class="PS">{{item.disease}}</p>
+      </a>
+    </div>
+  </div>
+
+  <p>أمراض تصيب النباتات</p>
+  <div class="parentContainer">
+    <div class="childContainer">
+      <a *ngFor="let item of Suggested_diseases_" class="a-card" routerLink="/apps/pages/disease-info/{{item.id}}">
+        <img class="diseaseImage" src="{{item.diseaseImage}}" alt="صورة">
+        <!-- <i class="fa-solid fa-kit-medical"></i> -->
+        <p class="PS">{{item.disease}}</p>
+      </a>
+    </div>
+  </div>
+
+</div>
+
+</div>

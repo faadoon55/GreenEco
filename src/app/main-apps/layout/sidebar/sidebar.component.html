@@ -1,0 +1,32 @@
+<div class="sidenav-body-container">
+
+  <div class="sidebar">
+
+    <a routerLink="/apps/pages/home">
+      <div class="container">
+        <p class="name">Green Ec</p>
+        <img class="logo" src="../../../../assets/images/bio-leaves.png" alt="o">
+      </div>
+    </a>
+
+    <div class="sidebar-divider"></div>
+
+    <div class="container1">
+      <a class="a" routerLink="/apps/pages/home">الرئيسية</a>
+      <a class="a" routerLink="/apps/pages/chat-page">ناقش الذكاء الاصطناعي</a>
+      <a class="a" routerLink="/apps/pages/plant-diseases">أمراض النباتات</a>
+      <a class="a" routerLink="/apps/pages/poisonous-plants">نباتات سامة</a>
+      <a class="a" routerLink="/apps/pages/animals-harmful-to-plants">حيوانات ضارة بالنبات</a>
+      <!-- <a class="a" routerLink="/apps/pages/my-garden">حديقتي</a>
+      <a class="a" routerLink="/apps/pages/reminders">التذكيرات</a> -->
+      <a class="a" routerLink="/apps/pages/account-info">حسابي</a>
+      <a class="a" routerLink="/auth/login" (click)="signout()">تسجيل الخروج</a>
+    </div>
+
+  </div>
+
+  <button class="toggle-button" (click)="SidebarService.toggleSidenav()" [class.is-flipped]="SidebarService.isExpanded">
+    <i class="fa-solid fa-angle-left"></i>
+  </button>
+
+</div>

@@ -1,0 +1,70 @@
+<div class="body">
+
+  <div class="maincontainer">
+
+    <div class="title">
+      <h1>معلومات النبات</h1>
+    </div>
+
+    <!-- <div  *ngFor="let item of information"> -->
+    <div class="inputGroup">
+      <label class="inputLabel" for="text">- المعلومات الأساسية للنبات:</label>
+      <input class="inputField" id="text" type="text" name="textName" [value]="informationToDisplay.information1" disabled>
+    </div>
+
+    <div class="inputGroup">
+      <label class="inputLabel" for="text">- أماكن الانتشار:</label>
+      <input class="inputField" id="text" type="text" name="textName" [value]="informationToDisplay.information2" disabled>
+    </div>
+
+    <div class="inputGroup">
+      <label class="inputLabel" for="text">- خصائص السمية:</label>
+      <input class="inputField" id="text" type="text" name="textName" [value]="informationToDisplay.information3" disabled>
+    </div>
+
+    <div class="inputGroup">
+      <label class="inputLabel" for="text">- أثره على النباتات الأخرى:</label>
+      <input class="inputField" id="text" type="text" name="textName" [value]="informationToDisplay.information4" disabled>
+    </div>
+
+    <div class="inputGroup">
+      <label class="inputLabel" for="text">- أثره على الكائنات الأخرى:</label>
+      <input class="inputField" id="text" type="text" name="textName" [value]="informationToDisplay.information5" disabled>
+    </div>
+
+    <div class="inputGroup">
+      <label class="inputLabel" for="text">- دورة حياة النبات:</label>
+      <input class="inputField" id="text" type="text" name="textName" [value]="informationToDisplay.information6" disabled>
+    </div>
+
+    <div class="inputGroup">
+      <label class="inputLabel" for="text">- طرق الانتشار:</label>
+      <input class="inputField" id="text" type="text" name="textName" [value]="informationToDisplay.information7" disabled>
+    </div>
+
+    <div class="inputGroup">
+      <label class="inputLabel" for="text">- التشخيص والتعرف:</label>
+      <input class="inputField" id="text" type="text" name="textName" [value]="informationToDisplay.information8" disabled>
+    </div>
+
+    <div class="inputGroup">
+      <label class="inputLabel" for="text">- طرق المكافحة:</label>
+      <input class="inputField" id="text" type="text" name="textName" [value]="informationToDisplay.information9" disabled>
+    </div>
+
+    <div class="inputGroup">
+      <label class="inputLabel" for="text">- التوصيات:</label>
+      <input class="inputField" id="text" type="text" name="textName" [value]="informationToDisplay.information10" disabled>
+    </div>
+  <!-- </div> -->
+
+    <div class="conversation-container">
+      <a class="a-conversation" routerLink="/apps/pages/chat-page">
+        ناقش واعرف المزيد
+        <i class="fa-solid fa-comments"></i>
+      </a>
+    </div>
+
+  </div>
+
+</div>
